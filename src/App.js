@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+
+
+
+
 const book = {
-  title: 'A Farwell to Arms'
-  author: 'Earnest Hemingway'
-  published: '1929'
-  Image: 'farwell.png'
-  width: '264'
+  title: 'A Farwell to Arms',
+  author: 'Earnest Hemingway',
+  published: '1929',
+  image: (logo),
+  width: '264',
   height: '378'
 
 };
@@ -20,10 +25,10 @@ function Bookshelf() {
       <img
       className="bookCover"
       src={book.image}
-      alt={book.title + 'cover'}
+      alt={book.title + ' cover'}
       style={{
-        width: book.width
-        height: book.height
+        width: book.width,
+        height: book.height,
       }}
       />
       </div>
