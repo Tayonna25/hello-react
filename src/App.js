@@ -1,6 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+const book = {
+  title: 'A Farwell to Arms'
+  author: 'Earnest Hemingway'
+  published: '1929'
+  Image:
+  width: '264'
+  height: '378'
+
+};
+
 function MagicButton() {
   return (
     <>
