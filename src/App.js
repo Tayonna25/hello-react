@@ -26,8 +26,8 @@ function App() {
         >
           Learn React with Tayonna and MSU small change!
         </a>
+        <MagicButton/>
       </header>
-      <MagicButton/>
     </div>
   );
 }
