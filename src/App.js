@@ -15,8 +15,8 @@ function App() {
           className="gumballMachine"
           src={
             isGreen
-              ? "https://example.com/gumball-machine-green.png"
-              : "https://img.icons8.com/color/480/000000/gumball-machine.png"
+              ? "ggreengumball.png"
+              : "rredgumball.png"
           }
           alt="Gumball Machine"
         />
