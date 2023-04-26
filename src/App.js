@@ -15,8 +15,9 @@ function App() {
           className="gumballMachine"
           src={
             isGreen
-              ? "https://example.com/gumball-machine.png"
-              : "https://imgbin.com/png/LpshUujS/chewing-gum-gumball-machine-bubble-gum-png")
+              ? "https://example.com/gumball-machine-green.png"
+              : "https://img.icons8.com/color/480/000000/gumball-machine.png"
+          }
           alt="Gumball Machine"
         />
         {isGreen ? (
