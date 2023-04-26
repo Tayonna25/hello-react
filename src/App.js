@@ -1,21 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
 
-
-
-
-
-
-const book = {
-  title: 'A Farwell to Arms',
-  author: 'Earnest Hemingway',
-  published: '1929',
-  image: (logo),
-  width: '264',
-  height: '378'
-
+const Header = () => {
+  return <h1>Welcome to my React Lab</h1>;
 };
 
+export default Header;
+
+const List = ({ data }) => {
+  return (
+    <ul>
+      {data.map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+};
+
+
+
+const App = () => {
+  const data = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Jane" },
+    { id: 3, name: "Bob" },
+  ];
+
+  const isDataEmpty = data.length === 0;
+
+  return (
+    <div>
+      <Header />
+      {isDataEmpty ? <p>No data available</p> : <List data={data} />}
+    </div>
+  );
+};
+
+export default App;
 
 function Bookshelf() {
   return (
