@@ -1,83 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-import React from "react";
-
-const Header = () => {
-  return <h1>Welcome to my React Lab</h1>;
-};
-
-export default Header;
-
-const List = ({ data }) => {
-  return (
-    <ul>
-      {data.map((item) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
-    </ul>
-  );
-};
-
-
-
-const App = () => {
-  const data = [
-    { id: 1, name: "John" },
-    { id: 2, name: "Jane" },
-    { id: 3, name: "Bob" },
-  ];
-
-  const isDataEmpty = data.length === 0;
-
-  return (
-    <div>
-      <Header />
-      {isDataEmpty ? <p>No data available</p> : <List data={data} />}
-    </div>
-  );
-};
-
-export default App;
-
-function Bookshelf() {
-  return (
-    <div>
-      <h2>{book.title}  ({book.published})</h2>
-      <p>{book.author}</p>
-      <img
-      className="bookCover"
-      src={book.image}
-      alt={book.title + ' cover'}
-      style={{
-        width: book.width,
-        height: book.height,
-      }}
-      />
-      </div>
-
-
-
-
-  );
-}
-
-function MagicButton() {
-  return (
-    <>
-    <h3>This is a magic button</h3>
-    <button>Magic</button>
-    </>
-  );
-}
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [isGreen, setIsGreen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsGreen(!isGreen);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <Bookshelf/>
+        <img
+          className="gumballMachine"
+          src={
+            isGreen
+              ? "https://cdn.pixabay.com/photo/2013/07/13/01/05/gumball-machine-155068_1280.png"
+              : "https://cdn.pixabay.com/photo/2013/07/12/15/56/gumball-machine-151988_1280.png"
+          }
+          alt="Gumball Machine"
+        />
+        {isGreen ? (
+          <p>You like 449!</p>
+        ) : (
+          <p>You like EB and BBC!</p>
+        )}
+        <button onClick={handleButtonClick}>
+          Click to Change Gumball Machine
+        </button>
       </header>
     </div>
   );
 }
 
-export default App ;
+export default App;
