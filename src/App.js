@@ -19,7 +19,7 @@ function Library() {
   getBooks();
   // Below is what displays when you use <Library />
   return (
-    <table>
+    <table className="book-table">
     {
       myBooks.map(b => (
         <tr>
