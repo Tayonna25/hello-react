@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { supabase } from './supabaseClient';
 import "./App.css";
+import  { MagicButton } from "./MagicButton";
 
 
 
