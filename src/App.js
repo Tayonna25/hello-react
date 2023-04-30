@@ -14,7 +14,7 @@ function Library() {
   return (
     <table> 
       {
-        myBooks.map(b => {
+        myBook.map(b => {
             <tr> 
               <td>{b.title}</td>
               <td>{b.author}</td>
