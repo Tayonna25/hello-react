@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { supabase } from './supabaseClient';
 import "./App.css";
 import  { MagicButton } from "./MagicButton";
@@ -6,7 +6,7 @@ import  { MagicButton } from "./MagicButton";
 
 
 function MagicButton () { 
-  const [count, setCount]= useState(0)
+  const [count , setCount]= useState(0)
   function doMagic() {
     setCount(count + 1);
   }
@@ -20,7 +20,7 @@ function MagicButton () {
 
   );
 }
-
+export { MagicButton };
 
 
 function App() {
@@ -54,5 +54,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
