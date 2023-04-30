@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { supabase } from './supabaseClient';
 import "./App.css";
-import  { MagicButton } from "./MagicButton";
 
 
 
@@ -48,7 +47,7 @@ function App() {
           <p>You like EB and BBC!</p>
         )}
         <button onClick={handleButtonClick}>
-          Click to Change Gumball Machine
+          Click MagicButton
         </button>
       </header>
     </div>
