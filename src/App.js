@@ -2,7 +2,15 @@ import React, { useState } from 'react';
 import { supabase } from './supabaseClient';
 import "./App.css";
 
-
+function Library() {
+  const [myBook, setMyBooks ] = useState([]);
+  async function getBooks() {
+    let { data: books, error } = await supabase
+    .from('books')
+    .select('*')
+    setMyBooks(books);
+  }
+} 
 
 function MagicButton () { 
   const [count , setCount]= useState(0)
