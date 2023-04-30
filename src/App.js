@@ -10,6 +10,22 @@ function Library() {
     .select('*')
     setMyBooks(books);
   }
+  getBooks();
+  return (
+    <table> 
+      {
+        setMyBooks.map(b => {
+            <tr> 
+              <td>{b.title}</td>
+              <td>{b.author}</td>
+              <td>{b.isbn}</td>
+
+            </tr>
+          })
+      }
+    </table>
+
+  );
 } 
 
 function MagicButton () { 
